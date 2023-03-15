@@ -44,53 +44,53 @@ public class frm02 extends JFrame {
 	    getContentPane().add(lblMetros);
 	    
 	    JLabel lblCentimetros = new JLabel("Centimetros:");
-	    lblCentimetros.setBounds(20,60,80,25);
+	    lblCentimetros.setBounds(30,90,100,25);
 	    getContentPane().add(lblCentimetros);
 	    
 	    JLabel lblPulgadas = new JLabel("Pulgadas:");
-	    lblPulgadas.setBounds(30,90,80,25);
+	    lblPulgadas.setBounds(30,120,80,25);
 	    getContentPane().add(lblPulgadas);
 	    
 	    JLabel lblPies = new JLabel("Pies:");
-	    lblPies.setBounds(30,120,80,25);
+	    lblPies.setBounds(30,150,80,25);
 	    getContentPane().add(lblPies);
 	    
 	    JLabel lblYardas = new JLabel("Yardas:");
-	    lblYardas.setBounds(30,150,80,25);
+	    lblYardas.setBounds(30,180,80,25);
 	    getContentPane().add(lblYardas);
 
 	    txtMetros = new JTextField();
-	    txtMetros.setBounds(100,30,70,25);
+	    txtMetros.setBounds(120,30,70,25);
 	    txtMetros.setMargin(new Insets(2,5,2,5));
 	    txtMetros.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtMetros);
 	    
 	    txtCentimetros = new JTextField();
-	    txtCentimetros.setBounds(100,60,70,25);
+	    txtCentimetros.setBounds(120,90,80,25);
 	    txtCentimetros.setMargin(new Insets(2,5,2,5));
 	    txtCentimetros.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtCentimetros);
 	    
 	    txtPulgadas = new JTextField();
-	    txtPulgadas.setBounds(100,90,70,25);
+	    txtPulgadas.setBounds(120,120,80,25);
 	    txtPulgadas.setMargin(new Insets(2,5,2,5));
 	    txtPulgadas.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtPulgadas);
 	    
 	    txtPies = new JTextField();
-	    txtPies.setBounds(100,120,70,25);
+	    txtPies.setBounds(120,150,80,25);
 	    txtPies.setMargin(new Insets(2,5,2,5));
 	    txtPies.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtPies);
 	    
 	    txtYardas = new JTextField();
-	    txtYardas.setBounds(100,150,70,25);
+	    txtYardas.setBounds(120,180,80,25);
 	    txtYardas.setMargin(new Insets(2,5,2,5));
 	    txtYardas.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtYardas);
 	    
 	    JButton btnCalcular = new JButton("Calcular");
-	    btnCalcular.setBounds(60,200,100,25);
+	    btnCalcular.setBounds(30,60,100,25);
 	    btnCalcular.setFocusPainted(false);
 	    getContentPane().add(btnCalcular);
 	    
