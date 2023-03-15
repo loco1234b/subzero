@@ -5,7 +5,8 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
-
+import java.util.ArrayList;
+import java.util.Collections;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -16,7 +17,7 @@ import javax.swing.SwingConstants;
 public class frm14 extends JFrame {
     private static final long serialVersionUID = 1L;
     
-	JTextField txtNm1,txtNumero2,txtNumero3,txtNumero4,txtNumero5,txtMayor,txtPromedio;
+	JTextField txtNm1,txtNumero2,txtNumero3,txtNumero4,txtNumero5,txtPromedio;
 	JLabel lblNumero1,lblNumero2,lblNumero3,lblNumero4,lblNumero5,lblMayor,lblPromedio;
 	
 	public static void main(String[] args) {
@@ -56,13 +57,9 @@ public class frm14 extends JFrame {
 	    JLabel lblNumero5 = new JLabel("Numero 5:");
 	    lblNumero5.setBounds(30,150,80,25);
 	    getContentPane().add(lblNumero5);
-	    
-	    JLabel lblMayor = new JLabel("Numeros mayores:");
-	    lblMayor.setBounds(30,210,100,25);
-	    getContentPane().add(lblMayor);
-	    
-	    JLabel lblPromedio = new JLabel("Promedio:");
-	    lblPromedio.setBounds(30,240,80,25);
+	   
+	    JLabel lblPromedio = new JLabel("Promedio de los 3 numeros mayores:");
+	    lblPromedio.setBounds(30,240,240,25);
 	    getContentPane().add(lblPromedio);
 	    
 	    txtNm1 = new JTextField();
@@ -95,14 +92,9 @@ public class frm14 extends JFrame {
 	    txtNumero5.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtNumero5);
 	    
-	    txtMayor = new JTextField();
-	    txtMayor.setBounds(100,210,150,25);
-	    txtMayor.setMargin(new Insets(2,5,2,5));
-	    txtMayor.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtMayor);
 	    
 	    txtPromedio = new JTextField();
-	    txtPromedio.setBounds(100,240,150,25);
+	    txtPromedio.setBounds(250,240,150,25);
 	    txtPromedio.setMargin(new Insets(2,5,2,5));
 	    txtPromedio.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtPromedio);
@@ -125,12 +117,17 @@ public class frm14 extends JFrame {
 		int numero4 = Integer.parseInt( txtNumero4.getText() );
 		int numero5 = Integer.parseInt( txtNumero5.getText() );
 		
-		double mayor = Math.min(numero1,numero2,numero3,numero4,numero5);
-		double promedio = mayor / 3;
-	
-		DecimalFormat df = new DecimalFormat("##.00");
-		txtMayor.setText( df.format(mayor) );
-		txtPromedio.setText( df.format(promedio) );
+		 ArrayList<Integer>orden = new ArrayList<Integer>();
+		 orden.add(numero1);
+		 orden.add(numero2);
+		 orden.add(numero3);
+		 orden.add(numero4);
+		 orden.add(numero5);
+		 
+		 Collections.sort(orden);
+		 double promedio = (orden.get(2)+ orden.get(3) + orden.get(4)) / 3;
+		 txtPromedio.setText(new DecimalFormat("##.00").format(promedio));
+
 		}
 
 }
