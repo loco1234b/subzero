@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.invoke.StringConcatException;
 import java.text.DecimalFormat;
 
 import javax.swing.JButton;
@@ -75,10 +76,11 @@ public class frm10 extends JFrame {
 		double n2 = (numero % 1000)/ 100;
 		double n1 = numero / 1000;
 		
-				
-		DecimalFormat df = new DecimalFormat("##");
-		txtReves.setText(df.format(n4+n3+n2+n1) );
+		DecimalFormat df = new DecimalFormat("##.##");
+		txtReves.setText( df.format(n4)+""+df.format(n3)+""+(df.format(n2)+""+n1));
 		
+
+
 		}
 
 }
