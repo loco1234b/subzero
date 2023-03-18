@@ -13,17 +13,17 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 
-public class frm05 extends JFrame {
+public class frm13 extends JFrame {
     private static final long serialVersionUID = 1L;
     
-	JTextField txtNumero,txtCambio,txtComprobar;
-	JLabel lblimporte,lbldescuento,lbltotal;
+	JTextField txtNumero,txtCondicion,txtcorrecto;
+	
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					frm05 frame = new frm05();
+					frm13 frame = new frm13();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -31,7 +31,7 @@ public class frm05 extends JFrame {
 			}
 		});
 	}
-	public frm05() {
+	public frm13() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0,0,500,350);
 		setLayout(null);
@@ -41,13 +41,13 @@ public class frm05 extends JFrame {
 	    lblnumero.setBounds(30,30,120,25);
 	    getContentPane().add(lblnumero);
 	    
-	    JLabel lblcomprobar = new JLabel("Comprobar datos:");
-	    lblcomprobar.setBounds(30,120,120,25);
-	    getContentPane().add(lblcomprobar);
-	   
-	    JLabel lblCambio = new JLabel("El numero mayor posible:");
-	    lblCambio.setBounds(30,150,180,25);
-	    getContentPane().add(lblCambio);
+	    JLabel lblcorrecto = new JLabel("Estado:");
+	    lblcorrecto.setBounds(30,120,120,25);
+	    getContentPane().add(lblcorrecto);
+	    
+	    JLabel lblcondicion = new JLabel("Condicion:");
+	    lblcondicion.setBounds(30,150,120,25);
+	    getContentPane().add(lblcondicion);
 	    
 	    txtNumero = new JTextField();
 	    txtNumero.setBounds(100,30,100,25);
@@ -55,18 +55,18 @@ public class frm05 extends JFrame {
 	    txtNumero.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtNumero);
 	    
-	    txtComprobar = new JTextField();
-	    txtComprobar.setBounds(200,120,100,25);
-	    txtComprobar.setMargin(new Insets(2,5,2,5));
-	    txtComprobar.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtComprobar);
+	    txtcorrecto= new JTextField();
+	    txtcorrecto.setBounds(100,120,120,25);
+	    txtcorrecto.setMargin(new Insets(2,5,2,5));
+	    txtcorrecto.setHorizontalAlignment(SwingConstants.RIGHT);
+	    getContentPane().add(txtcorrecto);
 	    
-	    txtCambio = new JTextField();
-	    txtCambio.setBounds(200,150,100,25);
-	    txtCambio.setMargin(new Insets(2,5,2,5));
-	    txtCambio.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtCambio);
-	  
+	    txtCondicion = new JTextField();
+	    txtCondicion.setBounds(100,150,300,25);
+	    txtCondicion.setMargin(new Insets(2,5,2,5));
+	    txtCondicion.setHorizontalAlignment(SwingConstants.RIGHT);
+	    getContentPane().add(txtCondicion);
+	    
 	    JButton btnCalcular = new JButton("Calcular");
 	    btnCalcular.setBounds(30,60,100,25);
 	    btnCalcular.setFocusPainted(false);
@@ -78,21 +78,21 @@ public class frm05 extends JFrame {
 	
 	protected void btnCalcular_actionPerformed() {
 		int numero = Integer.parseInt( txtNumero.getText() );
-		String e = "";
-		if(numero >= 1000 && numero <= 9999)e = "correcto";
-		else e = "error";
-		double millar = numero / 1000;
-		double centena = (numero % 1000) /100;
-		double decena = (numero % 1000) % 100 / 10;
-		double unidad = (numero % 1000 % 100) % 10;
 		
-	    double mayor =Math.max(Math.max(Math.max(millar,centena),decena),unidad);
-	    double menor = Math.min(Math.min(Math.min(millar,centena),decena),unidad);
-	    txtComprobar.setText(e);
-	    
-		DecimalFormat df = new DecimalFormat("##.##");
-		txtCambio.setText(df.format(mayor)+""+df.format(menor));
-		 
+		double centena = numero / 100;
+		double decena = numero % 100/ 10;
+		double unidades = numero % 10;
+		
+		String d = "";
+		if (numero > 100 && numero < 999)d = "Numero de 3 cifras";
+		else d = " error";   
+		txtcorrecto.setText(d);
+		
+		String a = "";   
+		if (centena > decena  && centena > unidades && decena > unidades)a = "Los numeros son desendentes";
+		else if (unidades > decena && unidades > centena && decena > centena)a = "Los numeros son ascendentes"; 
+		else a = "Los numeros no son ascendentes ni descendentes";
+		 txtCondicion.setText(a);   
 		}
 
 }
