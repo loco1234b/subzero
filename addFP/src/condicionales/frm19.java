@@ -13,7 +13,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 
-public class frm15 extends JFrame {
+public class frm19 extends JFrame {
     private static final long serialVersionUID = 1L;
     
 	JTextField txtNumero,txtComision,txtDescuento,txtSbruto,txtSneto;
@@ -23,7 +23,7 @@ public class frm15 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					frm15 frame = new frm15();
+					frm19 frame = new frm19();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -31,7 +31,7 @@ public class frm15 extends JFrame {
 			}
 		});
 	}
-	public frm15() {
+	public frm19() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0,0,500,350);
 		setLayout(null);
@@ -99,21 +99,6 @@ public class frm15 extends JFrame {
 	protected void btnCalcular_actionPerformed() {
 		int monto = Integer.parseInt( txtNumero.getText() );
 		
-		float comision = 0;
-		if (monto <=5000)comision =(float) (monto * 0.05);
-		else if (monto >= 5001 && monto <= 10000)comision = (float)(monto *  0.08);
-	    else if (monto >= 10001 && monto <= 20000)comision =(float) (monto * 0.10);
-	    else comision =(float) (monto *  0.15);
-		    
-        double sueldobasico = 250;
-		double sueldobruto = sueldobasico + comision;
-		
-        float descuento = 0; 
-		if (sueldobruto >= 3500)descuento = (float)(sueldobruto * 0.15);
-		else descuento =(float) (sueldobruto * 0.08);
-		
-
-		double sueldoneto = sueldobruto - descuento;
 		
 		DecimalFormat df = new DecimalFormat("##.00");
 		txtComision.setText( df.format(comision) );

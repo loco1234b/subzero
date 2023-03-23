@@ -13,7 +13,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 
-public class frm15 extends JFrame {
+public class frm16 extends JFrame {
     private static final long serialVersionUID = 1L;
     
 	JTextField txtNumero,txtComision,txtDescuento,txtSbruto,txtSneto;
@@ -23,7 +23,7 @@ public class frm15 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					frm15 frame = new frm15();
+					frm16 frame = new frm16();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -31,7 +31,7 @@ public class frm15 extends JFrame {
 			}
 		});
 	}
-	public frm15() {
+	public frm16() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0,0,500,350);
 		setLayout(null);
