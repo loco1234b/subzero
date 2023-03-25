@@ -98,24 +98,7 @@ public class frm16 extends JFrame {
 	
 	protected void btnCalcular_actionPerformed() {
 		int monto = Integer.parseInt( txtNumero.getText() );
-		
-		float comision = 0;
-		if (monto <=5000)comision =(float) (monto * 0.05);
-		else if (monto >= 5001 && monto <= 10000)comision = (float)(monto *  0.08);
-	    else if (monto >= 10001 && monto <= 20000)comision =(float) (monto * 0.10);
-	    else comision =(float) (monto *  0.15);
-		    
-        double sueldobasico = 250;
-		double sueldobruto = sueldobasico + comision;
-		
-        float descuento = 0; 
-		if (sueldobruto >= 3500)descuento = (float)(sueldobruto * 0.15);
-		else descuento =(float) (sueldobruto * 0.08);
-		
-
-		double sueldoneto = sueldobruto - descuento;
-		
-		DecimalFormat df = new DecimalFormat("##.00");
+	mat("##.00");
 		txtComision.setText( df.format(comision) );
 		txtSbruto.setText( df.format(sueldobruto) );
 		txtDescuento.setText( df.format(descuento) );

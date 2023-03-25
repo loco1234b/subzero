@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 
-import javax.lang.model.element.Element;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -91,11 +90,13 @@ public class frm18 extends JFrame {
 	protected void btnCalcular_actionPerformed() {
 		int donacion = Integer.parseInt( txtDonacion.getText() );
 
-	    int centrosalud = (int) (donacion * 0.25);
-		int comedorniños =(int) (donacion * 0.60);
-		int bolsa = (int) (donacion * 0.15) ;
+	    float centrosalud = (float) (donacion * 0.25);
+		float comedorniños =(float) (donacion * 0.60);
+		float bolsa = (float) (donacion * 0.15) ;
 		
-		if (donacion >= 10000)centrosalud = (int)(donacion * 0.30);comedorniños =(int) (donacion * 0.50);bolsa =(int) (donacion * 0.20);
+		if (donacion >= 10000)centrosalud = (int)(donacion * 0.30);
+		comedorniños =(int) (donacion * 0.50);
+		bolsa =(int) (donacion * 0.20);
 	
 	    DecimalFormat df = new DecimalFormat("##.00");
 		txtCentro.setText( df.format(centrosalud) );
