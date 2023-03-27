@@ -71,18 +71,21 @@ public class frm08 extends JFrame {
 	    
 	    txtAreabase = new JTextField();
 	    txtAreabase.setBounds(100,150,150,25);
+	    txtAreabase.setFocusable(false);
 	    txtAreabase.setMargin(new Insets(2,5,2,5));
 	    txtAreabase.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtAreabase);
 	    
 	    txtArealateral = new JTextField();
 	    txtArealateral.setBounds(100,180,150,25);
+	    txtArealateral.setFocusable(false);
 	    txtArealateral.setMargin(new Insets(2,5,2,5));
 	    txtArealateral.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtArealateral);
 	    
 	    txtAreatotal = new JTextField();
 	    txtAreatotal.setBounds(100,210,150,25);
+	    txtAreatotal.setFocusable(false);
 	    txtAreatotal.setMargin(new Insets(2,5,2,5));
 	    txtAreatotal.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtAreatotal);

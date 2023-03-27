@@ -69,14 +69,13 @@ public class frm28 extends JFrame {
 	
 	protected void btnCalcular_actionPerformed() {
 		int hora = Integer.parseInt( txtHora.getText() );
-		float d = 0;
+		String d = "";
 		
-		if (hora <= 12)d= hora;
-		else d=(float) (hora - 12);
+		if (hora <= 12)d= hora+".00.AM";
+		else d= (hora - 12+".00.PM");
 		  
+		txtFormato.setText(d);
 		
-		DecimalFormat df = new DecimalFormat("##.00 ");
-		txtFormato.setText( df.format(d)+ "PM" );
 		
 		    
 		}

@@ -82,48 +82,56 @@ public class frm20 extends JFrame {
 	    
 	    txtD200 = new JTextField();
 	    txtD200.setBounds(140,120,80,25);
+	    txtD200.setFocusable(false);
 	    txtD200.setMargin(new Insets(2,5,2,5));
 	    txtD200.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtD200);
 	    
 	    txtD100 = new JTextField();
 	    txtD100.setBounds(140,150,80,25);
+	    txtD100.setFocusable(false);
 	    txtD100.setMargin(new Insets(2,5,2,5));
 	    txtD100.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtD100);
 	    
 	    txtD50 = new JTextField();
 	    txtD50.setBounds(140,180,80,25);
+	    txtD50.setFocusable(false);
 	    txtD50.setMargin(new Insets(2,5,2,5));
 	    txtD50.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtD50);
 	    
 	    txtD20 = new JTextField();
 	    txtD20.setBounds(140,210,80,25);
+	    txtD20.setFocusable(false);
 	    txtD20.setMargin(new Insets(2,5,2,5));
 	    txtD20.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtD20);
 	    
 	    txtD10 = new JTextField();
 	    txtD10.setBounds(140,240,80,25);
+	    txtD10.setFocusable(false);
 	    txtD10.setMargin(new Insets(2,5,2,5));
 	    txtD10.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtD10);
 	    
 	    txtM5 = new JTextField();
 	    txtM5.setBounds(140,270,80,25);
+	    txtM5.setFocusable(false);
 	    txtM5.setMargin(new Insets(2,5,2,5));
 	    txtM5.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtM5);
 	    
 	    txtM2 = new JTextField();
 	    txtM2.setBounds(140,300,80,25);
+	    txtM2.setFocusable(false);
 	    txtM2.setMargin(new Insets(2,5,2,5));
 	    txtM2.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtM2);
 	    
 	    txtM1 = new JTextField();
 	    txtM1.setBounds(140,330,80,25);
+	    txtM1.setFocusable(false);
 	    txtM1.setMargin(new Insets(2,5,2,5));
 	    txtM1.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtM1);

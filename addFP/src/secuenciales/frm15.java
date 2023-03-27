@@ -79,12 +79,14 @@ public class frm15 extends JFrame {
 	    
 	    txtDanieldolares = new JTextField();
 	    txtDanieldolares.setBounds(110,150,80,25);
+	    txtDanieldolares.setFocusable(false);
 	    txtDanieldolares.setMargin(new Insets(2,5,2,5));
 	    txtDanieldolares.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtDanieldolares);
 	    
 	    txtCapital = new JTextField();
 	    txtCapital.setBounds(110,180,80,25);
+	    txtCapital.setFocusable(false);
 	    txtCapital.setMargin(new Insets(2,5,2,5));
 	    txtCapital.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtCapital);

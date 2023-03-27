@@ -16,7 +16,7 @@ import javax.swing.SwingConstants;
 public class frm16 extends JFrame {
     private static final long serialVersionUID = 1L;
     
-	JTextField txtNumero,txtComision,txtDescuento,txtSbruto,txtSneto;
+	JTextField txtCosto,txtIngreso,txtCuotai,txtCuotam,txtresto;
 	
 	
 	public static void main(String[] args) {
@@ -37,58 +37,61 @@ public class frm16 extends JFrame {
 		setLayout(null);
 		setLocationRelativeTo(null);
 		
-	    JLabel lblnumero= new JLabel("Monto:");
-	    lblnumero.setBounds(30,30,100,25);
-	    getContentPane().add(lblnumero);
+	    JLabel lblcosto= new JLabel("Costo:");
+	    lblcosto.setBounds(30,30,100,25);
+	    getContentPane().add(lblcosto);
 	    
-	    JLabel lblcomision = new JLabel("Comision:");
-	    lblcomision.setBounds(30,120,120,25);
-	    getContentPane().add(lblcomision);
+	    JLabel lblingresos = new JLabel("Ingresos:");
+	    lblingresos.setBounds(30,60,120,25);
+	    getContentPane().add(lblingresos);
 	    
-	    JLabel lblsbruto = new JLabel("Sueldo bruto:");
-	    lblsbruto.setBounds(30,150,140,25);
-	    getContentPane().add(lblsbruto);
+	    JLabel lblcuotai = new JLabel("Cuota inicial:");
+	    lblcuotai.setBounds(30,150,140,25);
+	    getContentPane().add(lblcuotai);
 	    
-	    JLabel lbldescuento = new JLabel("Descuento:");
-	    lbldescuento.setBounds(30,180,140,25);
-	    getContentPane().add(lbldescuento);
+	    JLabel lblresto = new JLabel("Resto:");
+	    lblresto.setBounds(30,180,140,25);
+	    getContentPane().add(lblresto);
 	    
-	    JLabel lblsneto = new JLabel("Sueldo neto:");
-	    lblsneto.setBounds(30,210,140,25);
-	    getContentPane().add(lblsneto);
+	    JLabel lblcuotam = new JLabel("Cuota mensual:");
+	    lblcuotam.setBounds(30,210,140,25);
+	    getContentPane().add(lblcuotam);
 	    
-	    txtNumero = new JTextField();
-	    txtNumero.setBounds(100,30,100,25);
-	    txtNumero.setMargin(new Insets(2,5,2,5));
-	    txtNumero.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtNumero);
+	    txtCosto = new JTextField();
+	    txtCosto.setBounds(100,30,100,25);
+	    txtCosto.setMargin(new Insets(2,5,2,5));
+	    txtCosto.setHorizontalAlignment(SwingConstants.RIGHT);
+	    getContentPane().add(txtCosto);
 	    
-	    txtComision = new JTextField();
-	    txtComision.setBounds(160,120,100,25);
-	    txtComision.setMargin(new Insets(2,5,2,5));
-	    txtComision.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtComision);
+	    txtIngreso = new JTextField();
+	    txtIngreso.setBounds(100,60,100,25);
+	    txtIngreso.setMargin(new Insets(2,5,2,5));
+	    txtIngreso.setHorizontalAlignment(SwingConstants.RIGHT);
+	    getContentPane().add(txtIngreso);
 	    
-	    txtSbruto = new JTextField();
-	    txtSbruto.setBounds(160,150,100,25);
-	    txtSbruto.setMargin(new Insets(2,5,2,5));
-	    txtSbruto.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtSbruto);
+	    txtCuotai = new JTextField();
+	    txtCuotai.setBounds(160,150,100,25);
+	    txtCuotai.setFocusable(false);
+	    txtCuotai.setMargin(new Insets(2,5,2,5));
+	    txtCuotai.setHorizontalAlignment(SwingConstants.RIGHT);
+	    getContentPane().add(txtCuotai);
 	    
-	    txtDescuento = new JTextField();
-	    txtDescuento.setBounds(160,180,100,25);
-	    txtDescuento.setMargin(new Insets(2,5,2,5));
-	    txtDescuento.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtDescuento);
+	    txtresto = new JTextField();
+	    txtresto.setBounds(160,180,100,25);
+	    txtresto.setFocusable(false);
+	    txtresto.setMargin(new Insets(2,5,2,5));
+	    txtresto.setHorizontalAlignment(SwingConstants.RIGHT);
+	    getContentPane().add(txtresto);
 	    
-	    txtSneto = new JTextField();
-	    txtSneto.setBounds(160,210,100,25);
-	    txtSneto.setMargin(new Insets(2,5,2,5));
-	    txtSneto.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtSneto);
+	    txtCuotam = new JTextField();
+	    txtCuotam.setBounds(160,210,100,25);
+	    txtCuotam.setFocusable(false);
+	    txtCuotam.setMargin(new Insets(2,5,2,5));
+	    txtCuotam.setHorizontalAlignment(SwingConstants.RIGHT);
+	    getContentPane().add(txtCuotam);
 	    
 	    JButton btnCalcular = new JButton("Calcular");
-	    btnCalcular.setBounds(30,60,100,25);
+	    btnCalcular.setBounds(30,90,100,25);
 	    btnCalcular.setFocusPainted(false);
 	    getContentPane().add(btnCalcular);
 	    
@@ -97,12 +100,25 @@ public class frm16 extends JFrame {
 	}
 	
 	protected void btnCalcular_actionPerformed() {
-		int monto = Integer.parseInt( txtNumero.getText() );
-	mat("##.00");
-		txtComision.setText( df.format(comision) );
-		txtSbruto.setText( df.format(sueldobruto) );
-		txtDescuento.setText( df.format(descuento) );
-		txtSneto.setText( df.format(sueldoneto) );
+		int ingresos = Integer.parseInt( txtIngreso.getText() );
+		int costo = Integer.parseInt( txtCosto.getText() );
+		
+		float cuotainicial=0;
+		float cuotamensual=0;
+		float resto = 0;
+		if (ingresos < 1250)cuotainicial =(float) (costo * 0.15);
+		else if (ingresos >= 1250)cuotainicial = (float)(costo * 0.30);
+	
+		if(ingresos < 1250)resto = costo - cuotainicial;
+		else if (ingresos >= 1250)resto = costo - cuotainicial;
+
+		if(ingresos < 1250)cuotamensual = resto / 120;
+		else if (ingresos >= 1250)cuotamensual = resto / 75;
+		
+		DecimalFormat df = new DecimalFormat("##.00");
+		txtCuotai.setText( df.format(cuotainicial) );
+		txtresto.setText(df.format(resto));
+		txtCuotam.setText( df.format(cuotamensual) );
 		
 		}
 

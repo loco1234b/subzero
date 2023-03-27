@@ -16,7 +16,7 @@ import javax.swing.SwingConstants;
 public class frm19 extends JFrame {
     private static final long serialVersionUID = 1L;
     
-	JTextField txtNumero,txtComision,txtDescuento,txtSbruto,txtSneto;
+	JTextField txtGenero,txtEdad,txtEstado,txtCategoria;
 	
 	
 	public static void main(String[] args) {
@@ -37,58 +37,48 @@ public class frm19 extends JFrame {
 		setLayout(null);
 		setLocationRelativeTo(null);
 		
-	    JLabel lblnumero= new JLabel("Monto:");
-	    lblnumero.setBounds(30,30,100,25);
-	    getContentPane().add(lblnumero);
+	    JLabel lblgenero= new JLabel("Genero:");
+	    lblgenero.setBounds(30,30,100,25);
+	    getContentPane().add(lblgenero);
 	    
-	    JLabel lblcomision = new JLabel("Comision:");
-	    lblcomision.setBounds(30,120,120,25);
-	    getContentPane().add(lblcomision);
+	    JLabel lbledad = new JLabel("Edad:");
+	    lbledad.setBounds(30,60,100,25);
+	    getContentPane().add(lbledad);
 	    
-	    JLabel lblsbruto = new JLabel("Sueldo bruto:");
-	    lblsbruto.setBounds(30,150,140,25);
-	    getContentPane().add(lblsbruto);
+	    JLabel lblestado = new JLabel("Estado:");
+	    lblestado.setBounds(30,150,100,25);
+	    getContentPane().add(lblestado);
 	    
-	    JLabel lbldescuento = new JLabel("Descuento:");
-	    lbldescuento.setBounds(30,180,140,25);
-	    getContentPane().add(lbldescuento);
+	    JLabel lblcategoria = new JLabel("Categoria:");
+	    lblcategoria.setBounds(30,180,100,25);
+	    getContentPane().add(lblcategoria);
 	    
-	    JLabel lblsneto = new JLabel("Sueldo neto:");
-	    lblsneto.setBounds(30,210,140,25);
-	    getContentPane().add(lblsneto);
+	    txtGenero = new JTextField();
+	    txtGenero.setBounds(100,30,100,25);
+	    txtGenero.setMargin(new Insets(2,5,2,5));
+	    txtGenero.setHorizontalAlignment(SwingConstants.RIGHT);
+	    getContentPane().add(txtGenero);
 	    
-	    txtNumero = new JTextField();
-	    txtNumero.setBounds(100,30,100,25);
-	    txtNumero.setMargin(new Insets(2,5,2,5));
-	    txtNumero.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtNumero);
+	    txtEdad = new JTextField();
+	    txtEdad.setBounds(100,60,100,25);
+	    txtEdad.setMargin(new Insets(2,5,2,5));
+	    txtEdad.setHorizontalAlignment(SwingConstants.RIGHT);
+	    getContentPane().add(txtEdad);
 	    
-	    txtComision = new JTextField();
-	    txtComision.setBounds(160,120,100,25);
-	    txtComision.setMargin(new Insets(2,5,2,5));
-	    txtComision.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtComision);
+	    txtEstado = new JTextField();
+	    txtEstado.setBounds(100,150,100,25);
+	    txtEstado.setMargin(new Insets(2,5,2,5));
+	    txtEstado.setHorizontalAlignment(SwingConstants.RIGHT);
+	    getContentPane().add(txtEstado);
 	    
-	    txtSbruto = new JTextField();
-	    txtSbruto.setBounds(160,150,100,25);
-	    txtSbruto.setMargin(new Insets(2,5,2,5));
-	    txtSbruto.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtSbruto);
-	    
-	    txtDescuento = new JTextField();
-	    txtDescuento.setBounds(160,180,100,25);
-	    txtDescuento.setMargin(new Insets(2,5,2,5));
-	    txtDescuento.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtDescuento);
-	    
-	    txtSneto = new JTextField();
-	    txtSneto.setBounds(160,210,100,25);
-	    txtSneto.setMargin(new Insets(2,5,2,5));
-	    txtSneto.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtSneto);
+	    txtCategoria = new JTextField();
+	    txtCategoria.setBounds(100,180,100,25);
+	    txtCategoria.setMargin(new Insets(2,5,2,5));
+	    txtCategoria.setHorizontalAlignment(SwingConstants.RIGHT);
+	    getContentPane().add(txtCategoria);
 	    
 	    JButton btnCalcular = new JButton("Calcular");
-	    btnCalcular.setBounds(30,60,100,25);
+	    btnCalcular.setBounds(30,90,100,25);
 	    btnCalcular.setFocusPainted(false);
 	    getContentPane().add(btnCalcular);
 	    
@@ -97,14 +87,23 @@ public class frm19 extends JFrame {
 	}
 	
 	protected void btnCalcular_actionPerformed() {
-		int monto = Integer.parseInt( txtNumero.getText() );
+		int genero = Integer.parseInt( txtGenero.getText() );
+		int edad = Integer.parseInt( txtEdad.getText() );
 		
+		String d = "";
+		if (genero == 1)d = "Femenino";
+		else if (genero == 2) d = "Masculino"; 
+		txtEstado.setText(d);
 		
-		DecimalFormat df = new DecimalFormat("##.00");
-		txtComision.setText( df.format(comision) );
-		txtSbruto.setText( df.format(sueldobruto) );
-		txtDescuento.setText( df.format(descuento) );
-		txtSneto.setText( df.format(sueldoneto) );
+		String categoria= "";
+		if (genero ==1 &&edad <= 23)categoria = "FA";   
+		else if (genero==1 && edad >=24)categoria = "FB";
+		    
+		
+		if (genero==2 && edad <= 25)categoria = "MA";
+		else if (genero == 2 && edad>= 26) categoria = "MB";
+		     
+		txtCategoria.setText(categoria);
 		
 		}
 

@@ -61,18 +61,21 @@ public class frm05 extends JFrame {
 	    
 	    txtMegabytes = new JTextField();
 	    txtMegabytes.setBounds(100,120,150,25);
+	    txtMegabytes.setFocusable(false);
 	    txtMegabytes.setMargin(new Insets(2,5,2,5));
 	    txtMegabytes.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtMegabytes);
 	    
 	    txtKilobytes = new JTextField();
 	    txtKilobytes.setBounds(100,150,150,25);
+	    txtKilobytes.setFocusable(false);
 	    txtKilobytes.setMargin(new Insets(2,5,2,5));
 	    txtKilobytes.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtKilobytes);
 	    
 	    txtBytes = new JTextField();
 	    txtBytes.setBounds(100,180,150,25);
+	    txtBytes.setFocusable(false);
 	    txtBytes.setMargin(new Insets(2,5,2,5));
 	    txtBytes.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtBytes);

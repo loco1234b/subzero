@@ -54,6 +54,7 @@ public class frm09 extends JFrame {
 	    
 	    txtSuma = new JTextField();
 	    txtSuma.setBounds(100,90,150,25);
+	    txtSuma.setFocusable(false);
 	    txtSuma.setMargin(new Insets(2,5,2,5));
 	    txtSuma.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtSuma);

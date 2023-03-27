@@ -73,18 +73,21 @@ public class frm18 extends JFrame {
 	    
 	    txtImporte = new JTextField();
 	    txtImporte.setBounds(100,150,80,25);
+	    txtImporte.setFocusable(false);
 	    txtImporte.setMargin(new Insets(2,5,2,5));
 	    txtImporte.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtImporte);
 	    
 	    txtDescuento = new JTextField();
 	    txtDescuento.setBounds(100,180,80,25);
+	    txtDescuento.setFocusable(false);
 	    txtDescuento.setMargin(new Insets(2,5,2,5));
 	    txtDescuento.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtDescuento);
 	    
 	    txtTotal = new JTextField();
 	    txtTotal.setBounds(120,210,80,25);
+	    txtTotal.setFocusable(false);
 	    txtTotal.setMargin(new Insets(2,5,2,5));
 	    txtTotal.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtTotal);

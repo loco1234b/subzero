@@ -59,12 +59,14 @@ public class frm03 extends JFrame {
 	    
 	    txtMetros = new JTextField();
 	    txtMetros.setBounds(230,150,80,25);
+	    txtMetros.setFocusable(false);
 	    txtMetros.setMargin(new Insets(2,5,2,5));
 	    txtMetros.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtMetros);
 	    
 	    txtYardas = new JTextField();
 	    txtYardas.setBounds(230,180,80,25);
+	    txtYardas.setFocusable(false);
 	    txtYardas.setMargin(new Insets(2,5,2,5));
 	    txtYardas.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtYardas);

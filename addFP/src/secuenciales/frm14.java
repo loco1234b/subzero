@@ -95,6 +95,7 @@ public class frm14 extends JFrame {
 	    
 	    txtPromedio = new JTextField();
 	    txtPromedio.setBounds(250,240,150,25);
+	    txtPromedio.setFocusable(false);
 	    txtPromedio.setMargin(new Insets(2,5,2,5));
 	    txtPromedio.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtPromedio);

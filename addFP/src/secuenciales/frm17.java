@@ -67,24 +67,28 @@ public class frm17 extends JFrame {
 	    
 	    txtCentro = new JTextField();
 	    txtCentro.setBounds(140,120,80,25);
+	    txtCentro.setFocusable(false);
 	    txtCentro.setMargin(new Insets(2,5,2,5));
 	    txtCentro.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtCentro);
 	    
 	    txtComedor = new JTextField();
 	    txtComedor.setBounds(140,150,80,25);
+	    txtComedor.setFocusable(false);
 	    txtComedor.setMargin(new Insets(2,5,2,5));
 	    txtComedor.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtComedor);
 	    
 	    txtEscuela = new JTextField();
 	    txtEscuela.setBounds(140,180,80,25);
+	    txtEscuela.setFocusable(false);
 	    txtEscuela.setMargin(new Insets(2,5,2,5));
 	    txtEscuela.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtEscuela);
 	    
 	    txtAsilo = new JTextField();
 	    txtAsilo.setBounds(140,210,80,25);
+	    txtAsilo.setFocusable(false);
 	    txtAsilo.setMargin(new Insets(2,5,2,5));
 	    txtAsilo.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtAsilo);

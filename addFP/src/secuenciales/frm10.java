@@ -52,6 +52,7 @@ public class frm10 extends JFrame {
 	    
 	    txtReves = new JTextField();
 	    txtReves.setBounds(100,90,150,25);
+	    txtReves.setFocusable(false);
 	    txtReves.setMargin(new Insets(2,5,2,5));
 	    txtReves.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtReves);

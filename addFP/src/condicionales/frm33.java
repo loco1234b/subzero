@@ -16,7 +16,7 @@ import javax.swing.SwingConstants;
 public class frm33 extends JFrame {
     private static final long serialVersionUID = 1L;
     
-	JTextField txtPension,txtCategoria,txtDescuento,txtNuevapension,txtPromedio;
+	JTextField txtPuntualidad,txtRendimiento,txtPuntaje,txtBonificacion,txtPuntaje2;
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -36,55 +36,55 @@ public class frm33 extends JFrame {
 		setLayout(null);
 		setLocationRelativeTo(null);
 		
-	    JLabel lblpromedio= new JLabel("Promedio:");
-	    lblpromedio.setBounds(30,30,100,25);
-	    getContentPane().add(lblpromedio);
+	    JLabel lblpuntualidad= new JLabel("Puntualidad:");
+	    lblpuntualidad.setBounds(30,30,100,25);
+	    getContentPane().add(lblpuntualidad);
 	    
-	    JLabel lblcategoria = new JLabel("Categoria:");
-	    lblcategoria.setBounds(30,60,100,25);
-	    getContentPane().add(lblcategoria);
+	    JLabel lblrendimiento = new JLabel("Rendimiento:");
+	    lblrendimiento.setBounds(30,60,100,25);
+	    getContentPane().add(lblrendimiento);
 	    
-	    JLabel lblpension = new JLabel("Pension actual:");
-	    lblpension.setBounds(30,150,150,25);
-	    getContentPane().add(lblpension);
+	    JLabel lblpuntaje = new JLabel("Puntaje de puntualidad:");
+	    lblpuntaje.setBounds(30,150,150,25);
+	    getContentPane().add(lblpuntaje);
 	    
-	    JLabel lbldescuento = new JLabel("Descuento:");
-	    lbldescuento.setBounds(30,180,150,25);
-	    getContentPane().add(lbldescuento);
+	    JLabel lblpuntaje2 = new JLabel("Puntaje de rendimiento:");
+	    lblpuntaje2.setBounds(30,180,150,25);
+	    getContentPane().add(lblpuntaje2);
 	    
-	    JLabel lblnuevapension = new JLabel("Nueva pension:");
-	    lblnuevapension.setBounds(30,210,150,25);
-	    getContentPane().add(lblnuevapension);
+	    JLabel lblbonificacion = new JLabel("Bonificacion:");
+	    lblbonificacion.setBounds(30,210,150,25);
+	    getContentPane().add(lblbonificacion);
 	    
-	    txtPromedio = new JTextField();
-	    txtPromedio.setBounds(100,30,100,25);
-	    txtPromedio.setMargin(new Insets(2,5,2,5));
-	    txtPromedio.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtPromedio);
+	    txtPuntualidad = new JTextField();
+	    txtPuntualidad.setBounds(120,30,100,25);
+	    txtPuntualidad.setMargin(new Insets(2,5,2,5));
+	    txtPuntualidad.setHorizontalAlignment(SwingConstants.RIGHT);
+	    getContentPane().add(txtPuntualidad);
 	    
-	    txtCategoria = new JTextField();
-	    txtCategoria.setBounds(100,60,100,25);
-	    txtCategoria.setMargin(new Insets(2,5,2,5));
-	    txtCategoria.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtCategoria);
+	    txtRendimiento = new JTextField();
+	    txtRendimiento.setBounds(120,60,100,25);
+	    txtRendimiento.setMargin(new Insets(2,5,2,5));
+	    txtRendimiento.setHorizontalAlignment(SwingConstants.RIGHT);
+	    getContentPane().add(txtRendimiento);
 	    
-	    txtPension = new JTextField();
-	    txtPension.setBounds(150,150,100,25);
-	    txtPension.setMargin(new Insets(2,5,2,5));
-	    txtPension.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtPension);
+	    txtPuntaje = new JTextField();
+	    txtPuntaje.setBounds(180,150,100,25);
+	    txtPuntaje.setMargin(new Insets(2,5,2,5));
+	    txtPuntaje.setHorizontalAlignment(SwingConstants.RIGHT);
+	    getContentPane().add(txtPuntaje);
 	    
-	    txtDescuento = new JTextField();
-	    txtDescuento.setBounds(150,180,100,25);
-	    txtDescuento.setMargin(new Insets(2,5,2,5));
-	    txtDescuento.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtDescuento);
+	    txtPuntaje2 = new JTextField();
+	    txtPuntaje2.setBounds(180,180,100,25);
+	    txtPuntaje2.setMargin(new Insets(2,5,2,5));
+	    txtPuntaje2.setHorizontalAlignment(SwingConstants.RIGHT);
+	    getContentPane().add(txtPuntaje2);
 	    
-	    txtNuevapension = new JTextField();
-	    txtNuevapension.setBounds(150,210,100,25);
-	    txtNuevapension.setMargin(new Insets(2,5,2,5));
-	    txtNuevapension.setHorizontalAlignment(SwingConstants.RIGHT);
-	    getContentPane().add(txtNuevapension);
+	    txtBonificacion = new JTextField();
+	    txtBonificacion.setBounds(180,210,100,25);
+	    txtBonificacion.setMargin(new Insets(2,5,2,5));
+	    txtBonificacion.setHorizontalAlignment(SwingConstants.RIGHT);
+	    getContentPane().add(txtBonificacion);
 	    
 	    JButton btnCalcular = new JButton("Calcular");
 	    btnCalcular.setBounds(30,90,100,25);
@@ -96,28 +96,35 @@ public class frm33 extends JFrame {
 	}
 	
 	protected void btnCalcular_actionPerformed() {
-		int promedio = Integer.parseInt( txtPromedio.getText() );
-		int categoria = Integer.parseInt( txtCategoria.getText() );
+		int puntualidad = Integer.parseInt( txtPuntualidad.getText() );
+		int rendimiento = Integer.parseInt( txtRendimiento.getText() );
 		
-		float pensionactual = 0;
-		if (categoria == 1)pensionactual = 550;
-		else if (categoria == 2)pensionactual = 500;
-		else if (categoria == 3)pensionactual = 450;
-		else if (categoria == 4) pensionactual = 400;
-		else pensionactual = 0;  
-
-        float descuento = 0;
-        if (promedio <= 13.99) descuento = 0;
-        else if (promedio >= 14 && promedio <= 15.99)descuento =(float) (pensionactual * 0.10);
-        else if (promedio >= 16 && promedio <= 17.99)descuento =(float) (pensionactual * 0.12);
-        else if (promedio >= 18 && promedio <= 20)descuento =(float) (pensionactual * 0.15);
-        else descuento = 0;   
-        double nuevapension = pensionactual - descuento;
-		
+		int puntaje = 0;
+		if (puntualidad == 0)puntaje = 10;
+		else if (puntualidad >=1 && puntualidad <=2)puntaje = 8;  
+		else if (puntualidad >=3 && puntualidad <=5)puntaje = 6;
+		else if (puntualidad >=6 && puntualidad <=9)puntaje = 4;
+		else puntaje = 0;
+		    
+        int puntaje2 = 0;
+		if (rendimiento == 0)puntaje2 = 10;
+		else if (rendimiento == 1)puntaje2 = 8;
+		else if (rendimiento == 2)puntaje2 = 5;
+		else if (rendimiento == 3)puntaje2 = 1;
+		else puntaje2 = 0;
+		 
+		double puntajetotal = puntaje + puntaje2;
+        float bonificacion =0;
+		if (puntajetotal <= 10)bonificacion = (float)(2.5 * puntajetotal); 
+		else if (puntajetotal >= 11 && puntajetotal <= 13)bonificacion =(float) (5 * puntajetotal);
+		else if (puntajetotal >= 14 && puntajetotal <= 16)bonificacion =(float) (7.5 * puntajetotal);
+		else if (puntajetotal >= 17 && puntajetotal <= 19)bonificacion =(float) (10 * puntajetotal);
+		else bonificacion =(float) (12.5 * puntajetotal);
+		    
 		DecimalFormat df = new DecimalFormat("##.00 ");
-		txtPension.setText( df.format(pensionactual) );
-		txtDescuento.setText( df.format(descuento) );
-		txtNuevapension.setText( df.format(nuevapension) );
+		txtPuntaje.setText( df.format(puntaje) );
+		txtPuntaje2.setText( df.format(puntaje2) );
+		txtBonificacion.setText( df.format(bonificacion) );
 		
 		    
 		}

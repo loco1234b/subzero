@@ -62,12 +62,14 @@ public class frm11 extends JFrame {
 	    
 	    txtCambio = new JTextField();
 	    txtCambio.setBounds(240,120,150,25);
+	    txtCambio.setFocusable(false);
 	    txtCambio.setMargin(new Insets(2,5,2,5));
 	    txtCambio.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtCambio);
 	    
 	    txtsegundo = new JTextField();
 	    txtsegundo.setBounds(240,150,150,25);
+	    txtsegundo.setFocusable(false);
 	    txtsegundo.setMargin(new Insets(2,5,2,5));
 	    txtsegundo.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtsegundo);

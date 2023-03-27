@@ -64,6 +64,7 @@ public class frm04 extends JFrame {
 	    
 	    txtMetros = new JTextField();
 	    txtMetros.setBounds(150,150,80,25);
+	    txtMetros.setFocusable(false);
 	    txtMetros.setMargin(new Insets(2,5,2,5));
 	    txtMetros.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtMetros);

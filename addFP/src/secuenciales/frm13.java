@@ -65,6 +65,7 @@ public class frm13 extends JFrame {
 	    
 	    txtHipotenusa = new JTextField();
 	    txtHipotenusa.setBounds(100,150,80,25);
+	    txtHipotenusa.setFocusable(false);
 	    txtHipotenusa.setMargin(new Insets(2,5,2,5));
 	    txtHipotenusa.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtHipotenusa);

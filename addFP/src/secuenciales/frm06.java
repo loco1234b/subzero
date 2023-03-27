@@ -67,12 +67,14 @@ public class frm06 extends JFrame {
 	    
 	    txtArea = new JTextField();
 	    txtArea.setBounds(100,150,150,25);
+	    txtArea.setFocusable(false);
 	    txtArea.setMargin(new Insets(2,5,2,5));
 	    txtArea.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtArea);
 	    
 	    txtVolumen = new JTextField();
 	    txtVolumen.setBounds(100,180,150,25);
+	    txtVolumen.setFocusable(false);
 	    txtVolumen.setMargin(new Insets(2,5,2,5));
 	    txtVolumen.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtVolumen);

@@ -67,24 +67,28 @@ public class frm19 extends JFrame {
 	    
 	    txtComision = new JTextField();
 	    txtComision.setBounds(140,120,80,25);
+	    txtComision.setFocusable(false);
 	    txtComision.setMargin(new Insets(2,5,2,5));
 	    txtComision.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtComision);
 	    
 	    txtSueldobruto = new JTextField();
 	    txtSueldobruto.setBounds(140,150,80,25);
+	    txtSueldobruto.setFocusable(false);
 	    txtSueldobruto.setMargin(new Insets(2,5,2,5));
 	    txtSueldobruto.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtSueldobruto);
 	    
 	    txtDescuento = new JTextField();
 	    txtDescuento.setBounds(140,180,80,25);
+	    txtDescuento.setFocusable(false);
 	    txtDescuento.setMargin(new Insets(2,5,2,5));
 	    txtDescuento.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtDescuento);
 	    
 	    txtSueldoneto = new JTextField();
 	    txtSueldoneto.setBounds(140,210,80,25);
+	    txtSueldoneto.setFocusable(false);
 	    txtSueldoneto.setMargin(new Insets(2,5,2,5));
 	    txtSueldoneto.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtSueldoneto);

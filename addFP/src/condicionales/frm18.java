@@ -90,13 +90,17 @@ public class frm18 extends JFrame {
 	protected void btnCalcular_actionPerformed() {
 		int donacion = Integer.parseInt( txtDonacion.getText() );
 
-	    float centrosalud = (float) (donacion * 0.25);
-		float comedorniños =(float) (donacion * 0.60);
-		float bolsa = (float) (donacion * 0.15) ;
+	    float centrosalud =0;  
+		float comedorniños =0;  
+		float bolsa =0;          
 		
-		if (donacion >= 10000)centrosalud = (int)(donacion * 0.30);
-		comedorniños =(int) (donacion * 0.50);
-		bolsa =(int) (donacion * 0.20);
+		if (donacion >= 10000)centrosalud = (float)0.30 * donacion;
+		else if (donacion >= 10000)comedorniños =(float) 0.50 * donacion;
+		else if (donacion >= 10000)bolsa =(int)0.20 * donacion;
+		
+		if (donacion <= 9999)centrosalud = (int) (donacion * 0.25);
+		else if (donacion <= 9999)comedorniños =(int) (donacion * 0.60);
+		else if (donacion <= 9999)bolsa = (int) (donacion * 0.15) ;
 	
 	    DecimalFormat df = new DecimalFormat("##.00");
 		txtCentro.setText( df.format(centrosalud) );

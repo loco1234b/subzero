@@ -73,18 +73,21 @@ public class frm16 extends JFrame {
 	    
 	    txtSueldobasico = new JTextField();
 	    txtSueldobasico.setBounds(130,120,80,25);
+	    txtSueldobasico.setFocusable(false);
 	    txtSueldobasico.setMargin(new Insets(2,5,2,5));
 	    txtSueldobasico.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtSueldobasico);
 	    
 	    txtSueldobruto = new JTextField();
 	    txtSueldobruto.setBounds(130,150,80,25);
+	    txtSueldobruto.setFocusable(false);
 	    txtSueldobruto.setMargin(new Insets(2,5,2,5));
 	    txtSueldobruto.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtSueldobruto);
 	    
 	    txtSueldoneto = new JTextField();
 	    txtSueldoneto.setBounds(130,180,80,25);
+	    txtSueldoneto.setFocusable(false);
 	    txtSueldoneto.setMargin(new Insets(2,5,2,5));
 	    txtSueldoneto.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtSueldoneto);

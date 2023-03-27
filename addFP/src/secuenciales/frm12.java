@@ -60,13 +60,13 @@ public class frm12 extends JFrame {
 	    
 	    
 	    txtValora = new JTextField();
-	    txtValora.setBounds(100,30,50,25);
+	    txtValora.setBounds(100,30,80,25);
 	    txtValora.setMargin(new Insets(2,5,2,5));
 	    txtValora.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtValora);
 	    
 	    txtValorb = new JTextField();
-	    txtValorb.setBounds(100,60,50,25);
+	    txtValorb.setBounds(100,60,80,25);
 	    txtValorb.setMargin(new Insets(2,5,2,5));
 	    txtValorb.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtValorb);
@@ -79,12 +79,14 @@ public class frm12 extends JFrame {
 	    
 	    txtEcuacion1 = new JTextField();
 	    txtEcuacion1.setBounds(110,150,80,25);
+	    txtEcuacion1.setFocusable(false);
 	    txtEcuacion1.setMargin(new Insets(2,5,2,5));
 	    txtEcuacion1.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtEcuacion1);
 	    
 	    txtEcuacion2 = new JTextField();
 	    txtEcuacion2.setBounds(110,180,80,25);
+	    txtEcuacion2.setFocusable(false);
 	    txtEcuacion2.setMargin(new Insets(2,5,2,5));
 	    txtEcuacion2.setHorizontalAlignment(SwingConstants.RIGHT);
 	    getContentPane().add(txtEcuacion2);
