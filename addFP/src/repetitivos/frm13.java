@@ -13,17 +13,17 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
-public class frm07 extends JFrame {
+public class frm13 extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
-	JTextField txtNumero, txtFactorial;
+	JTextField txtNumero, txtSuma;
 	
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					frm07 frame = new frm07();
+					frm13 frame = new frm13();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -32,7 +32,7 @@ public class frm07 extends JFrame {
 		});
 	}
 
-	public frm07() {
+	public frm13() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 500, 300);
 		setLocationRelativeTo(null);
@@ -42,21 +42,22 @@ public class frm07 extends JFrame {
 		lblNumero.setBounds(30, 30, 100, 25);
 		getContentPane().add(lblNumero);
 		
-		JLabel lblfactorial = new JLabel("Factorial :");
-		lblfactorial.setBounds(30, 120, 100, 25);
-		getContentPane().add(lblfactorial);
+		JLabel lblpotencia = new JLabel("Suma :");
+		lblpotencia.setBounds(30, 120, 100, 25);
+		getContentPane().add(lblpotencia);
 		
 		txtNumero = new JTextField();
 		txtNumero.setBounds(100, 30, 100, 25);
 		txtNumero.setMargin( new Insets( 2, 5, 2, 5 ));
 		txtNumero.setHorizontalAlignment(SwingConstants.RIGHT);
 		getContentPane().add(txtNumero);
-
-		txtFactorial = new JTextField();
-		txtFactorial.setBounds(100, 120, 100, 30);
-		txtFactorial.setMargin( new Insets( 2, 5, 2, 5 ));
-		txtFactorial.setHorizontalAlignment(SwingConstants.RIGHT);
-		getContentPane().add(txtFactorial);
+		
+		txtSuma = new JTextField();
+		txtSuma.setBounds(100, 120, 100, 25);
+		txtSuma.setFocusable(false);
+		txtSuma.setMargin( new Insets( 2, 5, 2, 5 ));
+		txtSuma.setHorizontalAlignment(SwingConstants.RIGHT);
+		getContentPane().add(txtSuma);
 		
 		JButton btnCalcular = new JButton("Calcular");
 		btnCalcular.setBounds(30, 60, 100, 30);
@@ -70,11 +71,13 @@ public class frm07 extends JFrame {
 
 	private void btnCalcular_actionPerformed() {
 		int numero = Integer.parseInt( txtNumero.getText() );
-		double factorial = 1;
-		for( int i= numero; i >0; i-- ) 
-			factorial = factorial *i;
-		txtFactorial.setText(""+factorial);
-
+		int total= 0;
+		for (int i =0; i <= numero; i++)
+			if(i % 3 ==0 || i % 5!=0)
+				total= total +1;
+		txtSuma.setText(""+total);
+				
+		
 	}
 
 }

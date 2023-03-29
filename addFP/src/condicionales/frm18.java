@@ -95,12 +95,13 @@ public class frm18 extends JFrame {
 		float bolsa =0;          
 		
 		if (donacion >= 10000)centrosalud = (float)0.30 * donacion;
-		else if (donacion >= 10000)comedorniños =(float) 0.50 * donacion;
-		else if (donacion >= 10000)bolsa =(int)0.20 * donacion;
+		if (donacion >= 10000)comedorniños =(float) 0.50 * donacion;
+		if (donacion >= 10000)bolsa =(float)0.20 * donacion;
 		
-		if (donacion <= 9999)centrosalud = (int) (donacion * 0.25);
-		else if (donacion <= 9999)comedorniños =(int) (donacion * 0.60);
-		else if (donacion <= 9999)bolsa = (int) (donacion * 0.15) ;
+		
+		if (donacion <= 9999)centrosalud = (float) (donacion * 0.25);
+		if (donacion <= 9999)comedorniños =(float) (donacion * 0.60);
+		if (donacion <= 9999)bolsa = (float) (donacion * 0.15) ;
 	
 	    DecimalFormat df = new DecimalFormat("##.00");
 		txtCentro.setText( df.format(centrosalud) );
